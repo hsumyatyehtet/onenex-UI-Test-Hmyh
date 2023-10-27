@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:fontFamily="@font/nunito_sans"
+        android:text="Gender"
+        android:textColor="@color/colorTitle"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:id="@+id/rlMale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_below="@+id/tvGender"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_card_medium_2"
+        android:background="@drawable/bg_reactangle_primary_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Male"
+            android:layout_marginHorizontal="@dimen/margin_medium_3"
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:fontFamily="@font/nunito_sans"
+            android:textSize="@dimen/text_regular"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlFemale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@+id/tvGender"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_toEndOf="@+id/rlMale"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:background="@drawable/bg_reactangle_black_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#242424"
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:layout_marginHorizontal="@dimen/margin_medium_3"
+            android:text="Female"
+            android:fontFamily="@font/nunito_sans"
+            android:textSize="@dimen/text_regular"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
