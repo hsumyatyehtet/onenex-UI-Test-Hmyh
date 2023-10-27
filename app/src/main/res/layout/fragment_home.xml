@@ -40,6 +40,8 @@
             android:background="@drawable/bg_reactangle_black"
             android:gravity="center_vertical"
             android:hint="How are your feeling today?"
+            android:drawableStart="@drawable/search"
+            android:drawablePadding="@dimen/margin_medium"
             android:inputType="text"
             android:lines="1"
             android:paddingStart="@dimen/margin_medium_3"

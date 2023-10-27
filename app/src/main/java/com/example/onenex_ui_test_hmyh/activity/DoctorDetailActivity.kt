@@ -26,12 +26,20 @@ class DoctorDetailActivity: AppCompatActivity() ,DateAdapter.Delegate{
 
         setUpRecyclerView()
         setUpDataObservation()
+        setUpListener()
 
     }
 
+    private fun setUpListener() {
+        binding.rlBack.setOnClickListener {
+            finish()
+        }
+        binding.rlBookAppointment.setOnClickListener {
+            finish()
+        }
+    }
+
     private fun setUpDataObservation() {
-
-
         mDateAdapter.setNewData(getDateList())
     }
 

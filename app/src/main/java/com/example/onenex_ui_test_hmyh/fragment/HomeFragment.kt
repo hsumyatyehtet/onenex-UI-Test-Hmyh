@@ -18,7 +18,7 @@ import com.example.onenex_ui_test_hmyh.util.getDoctor
 import com.example.onenex_ui_test_hmyh.util.getDoctorSpecialist
 import com.example.onenex_ui_test_hmyh.util.getTopDoctorCategoryList
 
-class HomeFragment: Fragment(),TopDoctorAdapter.Delegate {
+class HomeFragment: Fragment(),TopDoctorAdapter.Delegate,AvailableDoctorAdapter.Delegate {
 
     private lateinit var binding: FragmentHomeBinding
 
@@ -64,7 +64,7 @@ class HomeFragment: Fragment(),TopDoctorAdapter.Delegate {
         binding.viewPodTopDoctor.rvTopDoctor.adapter = mTopDoctorAdapter
 
 
-        mAvailableDoctorAdapter = AvailableDoctorAdapter()
+        mAvailableDoctorAdapter = AvailableDoctorAdapter(this)
         binding.viewPodAvailableDoctor.rvAvailableDoctor.layoutManager =
             GridLayoutManager(requireContext(),2)
         binding.viewPodAvailableDoctor.rvAvailableDoctor.adapter = mAvailableDoctorAdapter
@@ -79,6 +79,10 @@ class HomeFragment: Fragment(),TopDoctorAdapter.Delegate {
     }
 
     override fun onTapTopDoctorItem() {
+        startActivity(DoctorDetailActivity.newIntent(requireContext()))
+    }
+
+    override fun onTapTopAvailableDoctor() {
         startActivity(DoctorDetailActivity.newIntent(requireContext()))
     }
 
