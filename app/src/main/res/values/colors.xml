@@ -15,4 +15,8 @@
     <color name="accentColor3">#FFE016</color>
     <color name="accentColor4">#FF829B</color>
 
+    <color name="colorTitle">#3F3E3E</color>
+    <color name="colorSearchBar">#D6D6D6</color>
+    <color name="colorSearchBarText">#3F3E3E</color>
+
 </resources>
