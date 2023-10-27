@@ -75,6 +75,14 @@
             android:layout_marginBottom="@dimen/margin_medium"
             android:layout_below="@+id/viewPodConsult" />
 
+        <include
+            android:id="@+id/viewPodTopDoctor"
+            layout="@layout/view_pod_top_doctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_below="@+id/viewDoctorSpecialist" />
 
     </RelativeLayout>
 

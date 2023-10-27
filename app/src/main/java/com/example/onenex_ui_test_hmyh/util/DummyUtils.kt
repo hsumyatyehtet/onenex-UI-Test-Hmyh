@@ -2,6 +2,7 @@ package com.example.onenex_ui_test_hmyh.util
 
 import com.example.onenex_ui_test_hmyh.R
 import com.example.onenex_ui_test_hmyh.data.vos.DoctorSpecialistVO
+import com.example.onenex_ui_test_hmyh.data.vos.TopDoctorCategoryVO
 
 fun getDoctorSpecialist(): MutableList<DoctorSpecialistVO> {
     return mutableListOf(
@@ -13,5 +14,14 @@ fun getDoctorSpecialist(): MutableList<DoctorSpecialistVO> {
         DoctorSpecialistVO(6, "Youth Support", R.drawable.youth_day),
         DoctorSpecialistVO(7, "Sex Edu", R.drawable.sex_education),
         DoctorSpecialistVO(8, "LGBTQ+", R.drawable.lgbt)
+    )
+}
+
+fun getTopDoctorCategoryList(): MutableList<TopDoctorCategoryVO> {
+    return mutableListOf(
+        TopDoctorCategoryVO(1, "All"),
+        TopDoctorCategoryVO(2, "General"),
+        TopDoctorCategoryVO(3, "Abuse Recovery"),
+        TopDoctorCategoryVO(4, "Eating Disorder")
     )
 }
