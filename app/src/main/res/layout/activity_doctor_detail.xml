@@ -11,6 +11,7 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
+            android:id="@+id/rlDoctorProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_doctor_detail">
@@ -84,6 +85,46 @@
                 android:layout_below="@+id/tvPosition" />
 
         </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rlDoctorProfile"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:fontFamily="@font/nunito_sans_semi_bold"
+                android:text="About Doctor"
+                android:textColor="@color/colorTitle"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlProfile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_small"
+                android:fontFamily="@font/nunito_sans"
+                android:text="@string/tv_about_doctor"
+                android:textColor="@color/colorTitle"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:textSize="14sp" />
+
+            <include
+                android:id="@+id/viewPodDate"
+                layout="@layout/view_pod_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginHorizontal="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_medium_2" />
+
+        </LinearLayout>
 
     </RelativeLayout>
 

@@ -1,6 +1,7 @@
 package com.example.onenex_ui_test_hmyh.util
 
 import com.example.onenex_ui_test_hmyh.R
+import com.example.onenex_ui_test_hmyh.data.vos.DateVo
 import com.example.onenex_ui_test_hmyh.data.vos.DoctorSpecialistVO
 import com.example.onenex_ui_test_hmyh.data.vos.DoctorVO
 import com.example.onenex_ui_test_hmyh.data.vos.TopDoctorCategoryVO
@@ -31,6 +32,16 @@ fun getDoctor(): MutableList<DoctorVO> {
     return mutableListOf(
         DoctorVO(1, "Dr.Myo"),
         DoctorVO(2, "Dr.Aunng"),
+    )
+}
+
+fun getDateList(): MutableList<DateVo> {
+    return mutableListOf(
+        DateVo(1, "MON",11),
+        DateVo(2, "TUE",12),
+        DateVo(3, "WED",13),
+        DateVo(4, "THU",14),
+        DateVo(5, "FRI",15),
     )
 }
 
