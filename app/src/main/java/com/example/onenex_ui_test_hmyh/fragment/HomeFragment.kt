@@ -9,8 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.onenex_ui_test_hmyh.adapter.DoctorSpecialistAdapter
+import com.example.onenex_ui_test_hmyh.adapter.TopDoctorAdapter
 import com.example.onenex_ui_test_hmyh.adapter.TopDoctorCategoryAdapter
 import com.example.onenex_ui_test_hmyh.databinding.FragmentHomeBinding
+import com.example.onenex_ui_test_hmyh.util.getDoctor
 import com.example.onenex_ui_test_hmyh.util.getDoctorSpecialist
 import com.example.onenex_ui_test_hmyh.util.getTopDoctorCategoryList
 
@@ -20,6 +22,7 @@ class HomeFragment: Fragment() {
 
     private lateinit var mDoctorSpecialistAdapter: DoctorSpecialistAdapter
     private lateinit var mTopDoctorCategoryAdapter: TopDoctorCategoryAdapter
+    private lateinit var mTopDoctorAdapter: TopDoctorAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -53,6 +56,13 @@ class HomeFragment: Fragment() {
         binding.viewPodTopDoctor.rvTopDoctorCategory.adapter = mTopDoctorCategoryAdapter
 
         mTopDoctorCategoryAdapter.setNewData(getTopDoctorCategoryList())
+
+        mTopDoctorAdapter = TopDoctorAdapter()
+        binding.viewPodTopDoctor.rvTopDoctor.layoutManager =
+            GridLayoutManager(requireContext(),2)
+        binding.viewPodTopDoctor.rvTopDoctor.adapter = mTopDoctorAdapter
+
+        mTopDoctorAdapter.setNewData(getDoctor())
 
     }
 
