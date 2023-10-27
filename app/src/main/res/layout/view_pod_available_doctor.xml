@@ -5,12 +5,12 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tvTopDoctor"
+        android:id="@+id/tvAvailableDoctor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_sans_semi_bold"
         android:layout_marginHorizontal="@dimen/margin_medium_2"
-        android:text="Top Doctors"
+        android:text="Available Doctors"
         android:textColor="@color/colorTitle"
         android:textSize="18sp" />
 
@@ -26,20 +26,12 @@
         android:textSize="18sp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvTopDoctorCategory"
+        android:id="@+id/rvAvailableDoctor"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/margin_medium"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:layout_below="@+id/tvTopDoctor"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvTopDoctor"
-        android:layout_width="match_parent"
+        android:layout_below="@+id/tvAvailableDoctor"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_medium_2"
-        android:layout_marginTop="@dimen/margin_medium_2"
-        android:layout_below="@+id/rvTopDoctorCategory"/>
+        android:layout_marginTop="@dimen/margin_medium" />
 
 
 </RelativeLayout>

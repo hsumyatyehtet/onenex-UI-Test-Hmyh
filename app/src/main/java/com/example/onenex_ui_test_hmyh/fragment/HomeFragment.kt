@@ -8,6 +8,7 @@ import android.widget.GridLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.onenex_ui_test_hmyh.adapter.AvailableDoctorAdapter
 import com.example.onenex_ui_test_hmyh.adapter.DoctorSpecialistAdapter
 import com.example.onenex_ui_test_hmyh.adapter.TopDoctorAdapter
 import com.example.onenex_ui_test_hmyh.adapter.TopDoctorCategoryAdapter
@@ -23,6 +24,7 @@ class HomeFragment: Fragment() {
     private lateinit var mDoctorSpecialistAdapter: DoctorSpecialistAdapter
     private lateinit var mTopDoctorCategoryAdapter: TopDoctorCategoryAdapter
     private lateinit var mTopDoctorAdapter: TopDoctorAdapter
+    private lateinit var mAvailableDoctorAdapter: AvailableDoctorAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,6 +39,7 @@ class HomeFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setUpRecyclerView()
+        setUpDataObservation()
     }
 
     private fun setUpRecyclerView() {
@@ -46,8 +49,6 @@ class HomeFragment: Fragment() {
             GridLayoutManager(requireContext(),4)
         binding.viewDoctorSpecialist.rvDoctorSpecialists.adapter = mDoctorSpecialistAdapter
 
-        mDoctorSpecialistAdapter.setNewData(getDoctorSpecialist())
-
 
         //top doctor category
         mTopDoctorCategoryAdapter = TopDoctorCategoryAdapter()
@@ -55,15 +56,26 @@ class HomeFragment: Fragment() {
             LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
         binding.viewPodTopDoctor.rvTopDoctorCategory.adapter = mTopDoctorCategoryAdapter
 
-        mTopDoctorCategoryAdapter.setNewData(getTopDoctorCategoryList())
 
         mTopDoctorAdapter = TopDoctorAdapter()
         binding.viewPodTopDoctor.rvTopDoctor.layoutManager =
             GridLayoutManager(requireContext(),2)
         binding.viewPodTopDoctor.rvTopDoctor.adapter = mTopDoctorAdapter
 
-        mTopDoctorAdapter.setNewData(getDoctor())
+
+        mAvailableDoctorAdapter = AvailableDoctorAdapter()
+        binding.viewPodAvailableDoctor.rvAvailableDoctor.layoutManager =
+            GridLayoutManager(requireContext(),2)
+        binding.viewPodAvailableDoctor.rvAvailableDoctor.adapter = mAvailableDoctorAdapter
 
     }
+
+    private fun setUpDataObservation() {
+        mDoctorSpecialistAdapter.setNewData(getDoctorSpecialist())
+        mTopDoctorCategoryAdapter.setNewData(getTopDoctorCategoryList())
+        mTopDoctorAdapter.setNewData(getDoctor())
+        mAvailableDoctorAdapter.setNewData(getDoctor())
+    }
+
 
 }

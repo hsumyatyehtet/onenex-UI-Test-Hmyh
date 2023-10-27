@@ -84,6 +84,15 @@
             android:layout_marginBottom="@dimen/margin_medium"
             android:layout_below="@+id/viewDoctorSpecialist" />
 
+        <include
+            android:id="@+id/viewPodAvailableDoctor"
+            layout="@layout/view_pod_available_doctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_below="@+id/viewPodTopDoctor" />
+
     </RelativeLayout>
 
 </androidx.core.widget.NestedScrollView>
