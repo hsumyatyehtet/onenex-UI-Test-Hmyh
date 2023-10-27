@@ -8,6 +8,7 @@ import android.widget.GridLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.onenex_ui_test_hmyh.activity.DoctorDetailActivity
 import com.example.onenex_ui_test_hmyh.adapter.AvailableDoctorAdapter
 import com.example.onenex_ui_test_hmyh.adapter.DoctorSpecialistAdapter
 import com.example.onenex_ui_test_hmyh.adapter.TopDoctorAdapter
@@ -17,7 +18,7 @@ import com.example.onenex_ui_test_hmyh.util.getDoctor
 import com.example.onenex_ui_test_hmyh.util.getDoctorSpecialist
 import com.example.onenex_ui_test_hmyh.util.getTopDoctorCategoryList
 
-class HomeFragment: Fragment() {
+class HomeFragment: Fragment(),TopDoctorAdapter.Delegate {
 
     private lateinit var binding: FragmentHomeBinding
 
@@ -57,7 +58,7 @@ class HomeFragment: Fragment() {
         binding.viewPodTopDoctor.rvTopDoctorCategory.adapter = mTopDoctorCategoryAdapter
 
 
-        mTopDoctorAdapter = TopDoctorAdapter()
+        mTopDoctorAdapter = TopDoctorAdapter(this)
         binding.viewPodTopDoctor.rvTopDoctor.layoutManager =
             GridLayoutManager(requireContext(),2)
         binding.viewPodTopDoctor.rvTopDoctor.adapter = mTopDoctorAdapter
@@ -75,6 +76,10 @@ class HomeFragment: Fragment() {
         mTopDoctorCategoryAdapter.setNewData(getTopDoctorCategoryList())
         mTopDoctorAdapter.setNewData(getDoctor())
         mAvailableDoctorAdapter.setNewData(getDoctor())
+    }
+
+    override fun onTapTopDoctorItem() {
+        startActivity(DoctorDetailActivity.newIntent(requireContext()))
     }
 
 

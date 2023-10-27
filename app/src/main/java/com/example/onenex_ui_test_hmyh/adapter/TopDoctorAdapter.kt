@@ -12,14 +12,19 @@ import com.example.onenex_ui_test_hmyh.viewholder.DoctorSpecialistViewHolder
 import com.example.onenex_ui_test_hmyh.viewholder.TopDoctorCategoryViewHolder
 import com.example.onenex_ui_test_hmyh.viewholder.TopDoctorViewHolder
 
-class TopDoctorAdapter: BaseRecyclerAdapter<TopDoctorViewHolder, DoctorVO>() {
+class TopDoctorAdapter(private val delegate: Delegate): BaseRecyclerAdapter<TopDoctorViewHolder, DoctorVO>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopDoctorViewHolder {
         return TopDoctorViewHolder(
             ViewHolderInTopDoctorBinding.inflate(
                 LayoutInflater.from(parent.context), parent, false
-            )
+            ),
+            delegate
         )
+    }
+
+    interface Delegate{
+        fun onTapTopDoctorItem()
     }
 
 }

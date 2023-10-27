@@ -170,6 +170,7 @@
             </LinearLayout>
 
             <RelativeLayout
+                android:id="@+id/rlMakeAppointment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_reactangle_primary_10"
@@ -180,7 +181,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Make Appoinment"
+                    android:text="Make Appointment"
                     android:layout_centerInParent="true"
                     android:layout_marginVertical="@dimen/margin_medium"
                     android:textColor="@color/white"
