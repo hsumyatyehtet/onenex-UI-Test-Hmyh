@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_card_medium_2"
+        app:cardCornerRadius="10dp"
+        android:layout_weight="1"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rlExp"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_doctor_detail_exp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:src="@drawable/exp_desc"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvExp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlExp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:fontFamily="@font/nunito_sans_semi_bold"
+                android:text="10 Yars"
+                android:textColor="@color/colorTitle"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans"
+                android:text="Experience"
+                android:layout_below="@+id/tvExp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorTitle"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:textSize="@dimen/text_small" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="@dimen/margin_card_medium_2"
+        android:layout_weight="1"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rlRat"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_doctor_detail_rating">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:src="@drawable/ratig_desc"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlRat"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:fontFamily="@font/nunito_sans_semi_bold"
+                android:text="4.5"
+                android:textColor="@color/colorTitle"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans"
+                android:text="Ratings"
+                android:layout_below="@+id/tvRating"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorTitle"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:textSize="@dimen/text_small" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="@dimen/margin_card_medium_2"
+        android:layout_weight="1"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rlFee"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_doctor_detail_fee">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:src="@drawable/fee_desc"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlFee"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:fontFamily="@font/nunito_sans_semi_bold"
+                android:text="3000 MMK"
+                android:textColor="@color/colorTitle"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:text="Fees"
+                android:layout_below="@+id/tvFee"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/text_small" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

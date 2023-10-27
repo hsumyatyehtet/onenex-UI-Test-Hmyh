@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlProfileSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_semi_bold"
+                android:text="Welcome, Naing Luu"
+                android:textColor="@color/colorTitle"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/wave" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_below="@+id/rlProfileSection"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:background="@drawable/bg_reactangle_black"
+            android:gravity="center_vertical"
+            android:hint="How are your feeling today?"
+            android:drawableStart="@drawable/search"
+            android:drawablePadding="@dimen/margin_medium"
+            android:inputType="text"
+            android:lines="1"
+            android:paddingStart="@dimen/margin_medium_3"
+            android:paddingEnd="@dimen/margin_medium_3"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorSearchBarText"
+            android:textSize="@dimen/text_regular" />
+
+        <include
+            android:id="@+id/viewPodAppointment"
+            layout="@layout/view_pod_upccoming_appointment"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtSearch" />
+
+        <include
+            android:id="@+id/viewPodConsult"
+            layout="@layout/view_pod_consult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_below="@+id/viewPodAppointment" />
+
+        <include
+            android:id="@+id/viewDoctorSpecialist"
+            layout="@layout/view_pod_doctor_specialist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_below="@+id/viewPodConsult" />
+
+        <include
+            android:id="@+id/viewPodTopDoctor"
+            layout="@layout/view_pod_top_doctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_below="@+id/viewDoctorSpecialist" />
+
+        <include
+            android:id="@+id/viewPodAvailableDoctor"
+            layout="@layout/view_pod_available_doctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_below="@+id/viewPodTopDoctor" />
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

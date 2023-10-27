@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DoctorDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlDoctorProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_doctor_detail">
+
+            <RelativeLayout
+                android:id="@+id/rlBack"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:background="@drawable/bg_circle"
+                android:elevation="2dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/back_arrow" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlProfile"
+                android:layout_width="91dp"
+                android:layout_height="91dp"
+                android:layout_below="@+id/rlBack"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_circle_pp_grey">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:src="@drawable/doctor_detail" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvDoctorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlProfile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:fontFamily="@font/nunito_sans_semi_bold"
+                android:text="Dr.Sandy"
+                android:textColor="@color/colorTitle"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDoctorName"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/nunito_sans"
+                android:text="Therapist"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/text_small" />
+
+            <include
+                android:id="@+id/viewPodAboutDoctor"
+                layout="@layout/view_pod_about_doctor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPosition"
+                android:layout_marginHorizontal="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium_2" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rlDoctorProfile"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:fontFamily="@font/nunito_sans_semi_bold"
+                android:text="About Doctor"
+                android:textColor="@color/colorTitle"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlProfile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_small"
+                android:fontFamily="@font/nunito_sans"
+                android:text="@string/tv_about_doctor"
+                android:textColor="@color/colorTitle"
+                android:textSize="14sp" />
+
+            <include
+                android:id="@+id/viewPodDate"
+                layout="@layout/view_pod_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_medium_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:fontFamily="@font/nunito_sans_semi_bold"
+                android:text="Time Slot"
+                android:textColor="@color/colorTitle"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@drawable/bg_spinner">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:fontFamily="@font/nunito_sans"
+                    android:text="8:00 AM - 9:00 AM"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:src="@drawable/down_arrow" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:fontFamily="@font/nunito_sans_semi_bold"
+                android:text="Patient Details"
+                android:textColor="@color/colorTitle"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:fontFamily="@font/nunito_sans"
+                android:text="Full Name"
+                android:textColor="@color/colorTitle"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/bg_spinner"
+                android:fontFamily="@font/nunito_sans"
+                android:gravity="center_vertical"
+                android:hint="Tolu Arowoselo"
+                android:inputType="text"
+                android:lines="1"
+                android:paddingStart="@dimen/margin_medium_2"
+                android:paddingEnd="@dimen/margin_medium_2"
+                android:textColor="@color/colorTitle"
+                android:textColorHint="@color/colorTitle"
+                android:textSize="@dimen/text_regular" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:fontFamily="@font/nunito_sans"
+                android:text="Age"
+                android:textColor="@color/colorTitle"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@drawable/bg_spinner">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:fontFamily="@font/nunito_sans"
+                    android:text="26 - 30 "
+                    android:textColor="@color/colorTitle"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:src="@drawable/down_arrow" />
+
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/viewGender"
+                layout="@layout/view_pod_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:fontFamily="@font/nunito_sans"
+                android:text="Write your problem"
+                android:textColor="@color/colorTitle"
+                android:textSize="12sp" />
+
+
+            <EditText
+                android:id="@+id/etCustomerAddress"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@drawable/bg_spinner"
+                android:fontFamily="@font/nunito_sans"
+                android:ems="10"
+                android:gravity="top|start"
+                android:hint="Enter Address"
+                android:inputType="textMultiLine"
+                android:nestedScrollingEnabled="true"
+                android:paddingStart="@dimen/margin_medium_2"
+                android:paddingTop="@dimen/margin_medium_2"
+                android:paddingEnd="@dimen/margin_medium_2"
+                android:textColor="@color/colorTitle"
+                android:textColorHint="@color/colorTitle"
+                android:textSize="@dimen/text_regular" />
+
+            <RelativeLayout
+                android:id="@+id/rlBookAppointment"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginVertical="30dp"
+                android:background="@drawable/bg_book_appint">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginHorizontal="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:fontFamily="@font/nunito_sans_semi_bold"
+                    android:text="Book Appointment"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

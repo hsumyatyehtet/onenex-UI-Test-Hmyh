@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvTopDoctor"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="6dp">
+
+                <ImageView
+                    android:id="@+id/ivTopDoctor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/top_doctor" />
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/rlNameSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:layout_below="@+id/cvTopDoctor">
+
+                <TextView
+                    android:id="@+id/tvDoctorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_sans_semi_bold"
+                    android:text="Dr.Myo"
+                    android:textColor="@color/colorTitle"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/text_regular_2x" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/tvRating"
+                    android:layout_marginEnd="2dp"/>
+
+                <TextView
+                    android:id="@+id/tvRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_sans_semi_bold"
+                    android:text="4.5 (320)"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="@dimen/text_small" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlPositionSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:layout_below="@+id/rlNameSection">
+
+                <ImageView
+                    android:id="@+id/ivPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/position"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_small"/>
+
+                <TextView
+                    android:id="@+id/tvPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_sans"
+                    android:text="SRE Leader at Onenex"
+                    android:layout_toEndOf="@+id/ivPosition"
+                    android:textColor="@color/colorTitle"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/text_small" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llExp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlPositionSection"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_rectangle_exp"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_medium"
+                    android:layout_weight="1"
+                    android:layout_marginVertical="@dimen/margin_medium">
+
+                    <TextView
+                        android:id="@+id/tvExp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sans"
+                        android:text="Experience"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_smaller" />
+
+                    <TextView
+                        android:id="@+id/tvSalary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sans_semi_bold"
+                        android:text="12 years"
+                        android:layout_below="@id/tvExp"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_small" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_medium"
+                    android:layout_weight="1"
+                    android:layout_marginVertical="@dimen/margin_medium">
+
+                    <TextView
+                        android:id="@+id/tvFee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sans"
+                        android:text="Fees"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_smaller" />
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sans_semi_bold"
+                        android:text="30000 MMK"
+                        android:layout_below="@id/tvFee"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_small" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMakeAppointment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_reactangle_primary_10"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_below="@+id/llExp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Make Appointment"
+                    android:layout_centerInParent="true"
+                    android:layout_marginVertical="@dimen/margin_medium"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/nunito_sans"
+                    android:textSize="14sp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
