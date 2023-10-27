@@ -18,5 +18,6 @@
     <color name="colorTitle">#3F3E3E</color>
     <color name="colorSearchBar">#D6D6D6</color>
     <color name="colorSearchBarText">#3F3E3E</color>
+    <color name="colorButtonBlue">#5185FE</color>
 
 </resources>
